@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: read
+  # Required so the called secrets-scan workflow can upload SARIF.
   security-events: write
 
 concurrency:
@@ -14,13 +15,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  inline-gitleaks:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
-        with:
-          fetch-depth: 0
-      - uses: gitleaks/gitleaks-action@ff98106e4c7b2bc287b24eaf42907196329070c7 # v2.3.9
-        env:
-          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
-          GITHUB_TOKEN: ${{ github.token }}
+  secrets-scan:
+    uses: rechenmaschine-playground/ci-templates/.github/workflows/secrets-scan.yml@9ccb2bf4e790fd595896977585708d61673b71d5 # v0.1.0
+    secrets: inherit
