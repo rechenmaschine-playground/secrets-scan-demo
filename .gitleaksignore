@@ -16,3 +16,7 @@ d0ead3f322a8bda791f143db75aaa9ae3cc928a3:src/notifier.rs:slack-webhook-url:5
 # revoked on the auth service; fingerprint kept to acknowledge the
 # historical occurrence in main's history.
 79890291a3ef620fac385be48caefd92fe50882b:src/alerting.rs:jwt:4
+
+# Demo: validation JWT from PR #6 (v0.3.0 e2e test). Test fixture, never
+# a real credential.
+ec99b0167268d8f920099adab295030ffd6b7fa6:src/auth.rs:jwt:5
