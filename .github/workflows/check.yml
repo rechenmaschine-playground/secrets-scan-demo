@@ -16,5 +16,5 @@ concurrency:
 
 jobs:
   secrets-scan:
-    uses: rechenmaschine-playground/ci-templates/.github/workflows/secrets-scan.yml@b0ce7d6618b6c73bdd5bd714475d00f7e8c3b353 # v0.1.1
+    uses: rechenmaschine-playground/ci-templates/.github/workflows/secrets-scan.yml@6dc3293cb3f9018bba6b49ce79912bd512ec1c38 # v0.1.2
     secrets: inherit
