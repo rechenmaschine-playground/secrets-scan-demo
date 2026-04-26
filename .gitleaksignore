@@ -6,9 +6,11 @@
 # (or was never real) and explicitly acknowledges the historical leak —
 # gitleaks will keep matching it but mark it as expected.
 
-# Demo: original triage-walkthrough Slack webhook (PR #3). Webhook
-# rotated upstream; fingerprint kept so future gitleaks runs don't refire.
+# Demo: triage-walkthrough Slack webhook. Two copies in history because
+# PR #3 merged the original commit and PR #4 merged a cherry-picked copy
+# with a different SHA. Webhook rotated upstream; both fingerprints kept.
 4e484b8ca9ae490f09bb60eeb2b6b2627f74b2fc:src/notifier.rs:slack-webhook-url:5
+d0ead3f322a8bda791f143db75aaa9ae3cc928a3:src/notifier.rs:slack-webhook-url:5
 
 # Demo: JWT bearer token from the force-merge scenario (PR #5). Token
 # revoked on the auth service; fingerprint kept to acknowledge the
