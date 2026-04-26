@@ -1,0 +1,7 @@
+# Suppress known-OK gitleaks findings. Format is one fingerprint per
+# line: <commit>:<file>:<rule>:<line>. Get a fingerprint from a failing
+# run's gitleaks log or from the Code Scanning alert details.
+
+# Test fixture: a fake Slack webhook in src/config.rs used to validate
+# that the secrets-scan workflow catches leaks. Not a real credential.
+f3d33bc479aa07100fce89ae1089282e0cdb7ccd:src/config.rs:slack-webhook-url:6
