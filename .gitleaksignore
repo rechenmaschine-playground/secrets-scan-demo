@@ -1,0 +1,12 @@
+# Suppress known-OK gitleaks findings. One fingerprint per line:
+# <commit>:<file>:<rule>:<line>. Get a fingerprint from a failing run's
+# gitleaks log or from the Code Scanning alert.
+#
+# Adding a fingerprint here documents that the secret has been rotated
+# (or was never real) and explicitly acknowledges the historical leak —
+# gitleaks will keep matching it but mark it as expected.
+
+# Demo Slack webhook leaked in the previous commit. The webhook has been
+# rotated upstream; the fingerprint below acknowledges the historical
+# occurrence so CI passes.
+4e484b8ca9ae490f09bb60eeb2b6b2627f74b2fc:src/notifier.rs:slack-webhook-url:5
