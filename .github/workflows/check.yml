@@ -15,4 +15,5 @@ concurrency:
 jobs:
   secrets-scan:
     uses: rechenmaschine-playground/ci-templates/.github/workflows/secrets-scan.yml@9ccb2bf4e790fd595896977585708d61673b71d5 # v0.1.0
-    secrets: inherit
+    secrets:
+      GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
