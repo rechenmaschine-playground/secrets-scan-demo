@@ -1,6 +1,6 @@
-// Test file: a generic high-entropy "API key" assignment. This pattern
-// is caught by gitleaks' generic-api-key rule but generally not by
-// GitHub's native push protection (which only blocks high-confidence
-// partner-validated patterns).
+// Test file: a fake Slack incoming-webhook URL. Pattern matches
+// gitleaks' slack-webhook-url rule. Value is randomized to avoid any
+// allowlist; URL is non-functional.
 
-pub const API_KEY: &str = "kx9P3vN7tQ2wJ5mZ8rL4eY1hC6bF0aDuG3sB9XnVkA";
+pub const SLACK_WEBHOOK: &str =
+    "https://hooks.slack.com/services/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tU";
